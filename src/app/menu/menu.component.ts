@@ -1,6 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../Shared/bus';
 
+const BUSES: Bus[] = [
+  {
+    id: '0',
+    name: 'Ruta 1',
+    image: '/assets/bus.jpg',
+    disponibility: true,
+    rute: 'Probando'
+  },
+
+];
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -8,16 +19,9 @@ import { Bus } from '../Shared/bus';
 })
 export class MenuComponent implements OnInit {
 
-  buses: Bus[] = [
-    {
-      id: '0',
-      name: 'Ruta 1',
-      image: '/assets/bus.jpg',
-      disponiblily: true,
-      rute: 'Probando'
-    },
-  ]
-
+  buses = BUSES;
+  
+  selectedBus = BUSES[0];
 
 
   constructor() { }

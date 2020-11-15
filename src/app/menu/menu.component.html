@@ -2,14 +2,44 @@
     fxLayout="column"
     fxLayoutGap="10px">
 
-    <mat-list fxFlex>
-        <mat-list-item *ngFor="let bus of buses">
-            <img matListAvatar src={{bus.image}} alt={{bus.rute}}>
-            <h1 matLine> {{bus.name}} </h1>
-            <p matLine>
-                <span> {{bus.rute}} </span>
-            </p>
-        </mat-list-item>
-    </mat-list>
+    <div fxFlex>
+        <div>
+            <h3>Lista de Buses</h3>
+            <hr>
+        </div>
+    </div>
+
+    <div fxFlex>
+        <mat-grid-list cols="2" rowHeight="200px">
+            <mat-grid-tile *ngFor="let bus of buses">
+                <img height="200px" src={{bus.image}} alt={{bus.name}}>
+               <mat-grid-tile-footer>
+                    <h2>{{bus.name | uppercase}}</h2>
+                </mat-grid-tile-footer>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div fxFlex *ngIf="selectedBus">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h3>{{selectedBus.name | uppercase}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+           <img mat-card-image src={{selectedBus.image}} alt={{selectedBus.name}}> 
+            <mat-card-content>
+                <p>
+                    {{selectedBus.rute}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>Ver Mapa</button>
+                <button mat-button>Tiempo Estimado</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+        
+
 
 </div>

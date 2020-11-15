@@ -2,6 +2,6 @@ export class Bus {
     id: string;
     name: string;
     image: string;
-    disponiblily: boolean;
+    disponibility: boolean;
     rute: string;
 }
