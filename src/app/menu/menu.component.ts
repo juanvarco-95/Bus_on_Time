@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../Shared/bus';
 
+
 const BUSES: Bus[] = [
   {
     id: '0',
     name: 'Ruta 1',
     image: '/assets/bus.jpg',
     disponibility: true,
-    rute: 'Probando'
+    rute: '/assets/Mapa.jpg'
   },
 
 ];
+
+
 
 @Component({
   selector: 'app-menu',

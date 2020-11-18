@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "BusONtime"
+  "defaultProject": "BusONtime",
+  "cli": {
+    "analytics": "040c8927-bfd9-49f6-9f13-73faedec629c"
+  }
 }

@@ -5,3 +5,4 @@ export class Bus {
     disponibility: boolean;
     rute: string;
 }
+
