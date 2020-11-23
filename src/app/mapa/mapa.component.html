@@ -1,7 +1,12 @@
-<google-map width="300" height="300" [center] = "position">
-    <map-marker 
-    [position] = "position"
-    [label] = "label">
+<agm-map 
+    [latitude]="latPer" 
+    [longitude]="lngPer" 
+    [zoom]="zoom">
+    <agm-polygon [paths]="paths">
 
-    </map-marker>
-</google-map>
+    </agm-polygon>
+    <agm-marker [latitude] = "latPer" [longitude]="lngPer" [label] = "labelPer"></agm-marker>
+    <agm-marker [latitude] = "latBus" [longitude]="lngBus" [label] = "labelBus"></agm-marker> 
+ 
+    
+</agm-map>

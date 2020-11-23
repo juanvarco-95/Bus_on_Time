@@ -1,4 +1,6 @@
+import { LatLng, LatLngLiteral } from '@agm/core';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-mapa',
@@ -7,20 +9,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapaComponent implements OnInit {
 
-  title = 'mapa';
-  
-  pos = {
-    lat : -34.681,
-    lng : -58.371
-  };
+  latBus = 4.81321;
+  lngBus = -75.6946;
+  labelBus = "B"
 
-  label = {
-    color: 'black',
-    text: 'Mark'
-  }
-  constructor() { }
+  
+  latPer ;
+  lngPer ;
+  labelPer = "P"
+  zoom = 15;
+
+ 
+  paths: LatLngLiteral[] = [
+    { lat: 4.81321, lng: -75.6946 },
+    
+  ]
+
 
   ngOnInit(): void {
+    this.getLocation();
   }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position: Position) => {
+        if (position) {
+          console.log("Latitude: " + position.coords.latitude +
+            "Longitude: " + position.coords.longitude);
+          this.latPer = position.coords.latitude;
+          this.lngPer = position.coords.longitude;
+          console.log(this.latPer);
+          console.log(this.lngPer);
+        }
+      },
+        (error: PositionError) => console.log(error));
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  
 
 }

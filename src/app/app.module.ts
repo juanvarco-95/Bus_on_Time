@@ -8,6 +8,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { GoogleMapsModule} from '@angular/google-maps';
+import { AgmCoreModule } from '@agm/core';
+
+
 
 
 import { AppComponent } from './app.component';
@@ -30,8 +33,11 @@ import { MapaComponent } from './mapa/mapa.component';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    GoogleMapsModule
-
+  
+    GoogleMapsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAiCcVaA3sTo0Zv3caDi4HdQYARcjo3yI4'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
