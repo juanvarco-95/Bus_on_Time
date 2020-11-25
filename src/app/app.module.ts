@@ -13,6 +13,7 @@ import { AgmCoreModule } from '@agm/core';
 
 
 
+
 import { AppComponent } from './app.component';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -33,11 +34,11 @@ import { MapaComponent } from './mapa/mapa.component';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-  
     GoogleMapsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAiCcVaA3sTo0Zv3caDi4HdQYARcjo3yI4'
-    })
+      apiKey: 'AIzaSyAiCcVaA3sTo0Zv3caDi4HdQYARcjo3yI4',
+      libraries: ['geometry']
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

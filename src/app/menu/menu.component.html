@@ -15,7 +15,13 @@
                 <img height="200px" src={{bus.image}} alt={{bus.name}}>
                <mat-grid-tile-footer>
                     <h2>{{bus.name | uppercase}}</h2>
-                </mat-grid-tile-footer>
+                </mat-grid-tile-footer>  
+            </mat-grid-tile>
+            <mat-grid-tile *ngFor="let bus of buses">
+                <img height="200px" src={{bus.rute}} alt={{bus.name}}>
+               <mat-grid-tile-footer>
+                    <h2>RUTA</h2>
+                </mat-grid-tile-footer>  
             </mat-grid-tile>
         </mat-grid-list>
     </div>

@@ -5,8 +5,8 @@ import { Bus } from '../Shared/bus';
 const BUSES: Bus[] = [
   {
     id: '0',
-    name: 'Ruta 1',
-    image: '/assets/bus.jpg',
+    name: 'Ruta 27 Megabus',
+    image: '/assets/Ruta27.jpg',
     disponibility: true,
     rute: '/assets/Mapa.jpg'
   },

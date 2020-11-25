@@ -1,10 +1,29 @@
+<div class="container"
+    fxLayout="column"
+    fxLayoutGap="5px">
+
+
+<div fxFlex>
+    <div>
+        <h3>Mapa
+        </h3>
+        <hr>
+    </div>
+</div>
+
+<div fxFlex>
+    <div>
+        <h3>
+        </h3>
+        
+    </div>
+</div>
+     
 <agm-map 
     [latitude]="latPer" 
     [longitude]="lngPer" 
     [zoom]="zoom">
-    <agm-polygon [paths]="paths">
-
-    </agm-polygon>
+   
     <agm-marker [latitude] = "latPer" [longitude]="lngPer" [label] = "labelPer"></agm-marker>
     <agm-marker [latitude] = "latBus" [longitude]="lngBus" [label] = "labelBus"></agm-marker> 
  
