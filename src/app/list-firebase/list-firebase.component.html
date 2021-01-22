@@ -1,0 +1,23 @@
+<table class ="table table-bordered table-responsive-sm table-responsive-md table table-responsive-lg">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">image</th>
+            <th scope="col">disponibility</th>
+            <th scope="col">rute</th>
+            <th scope="col">time</th>
+            <th scope="col">pos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dato of Dato">
+            <th>{{dato.$key}}</th>
+            <th>{{dato.image}}</th>
+            <th>{{dato.disponibility}}</th>
+            <th>{{dato.rute}}</th>
+            <th>{{dato.time}}</th>
+            <th>{{dato.pos}}</th>
+        </tr>
+    </tbody>
+</table>
+

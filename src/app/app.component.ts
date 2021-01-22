@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BusONtime';
+
+  isValid: boolean = true;
+	check(valid: boolean){
+		this.isValid = valid;
+	}
+ 
 }

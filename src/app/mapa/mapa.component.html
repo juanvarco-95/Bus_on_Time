@@ -1,31 +1,70 @@
+
 <div class="container"
     fxLayout="column"
     fxLayoutGap="5px">
 
-
 <div fxFlex>
     <div>
-        <h3>Mapa
-        </h3>
+        <h3>Mapa </h3>
         <hr>
     </div>
 </div>
 
+
 <div fxFlex>
     <div>
-        <h3>
-        </h3>
         
-    </div>
-</div>
-     
+
+
 <agm-map 
     [latitude]="latPer" 
     [longitude]="lngPer" 
     [zoom]="zoom">
+
+    <agm-polyline>
+        <agm-polyline-point *ngFor= "let a of map"
+            [latitude]="a.lat"
+            [longitude]="a.lng">
+        </agm-polyline-point> 
+    </agm-polyline>
    
     <agm-marker [latitude] = "latPer" [longitude]="lngPer" [label] = "labelPer"></agm-marker>
-    <agm-marker [latitude] = "latBus" [longitude]="lngBus" [label] = "labelBus"></agm-marker> 
- 
+    <agm-marker [latitude] = "busLocationlat()" [longitude]="busLocationlng()" [label] = "labelBus"></agm-marker> 
+    <agm-marker [latitude] = "latPrueba1" [longitude]="lngPrueba1" [label] = "labelPrueba1"></agm-marker>
+    <agm-marker [latitude] = "latPrueba2" [longitude]="lngPrueba2" [label] = "labelPrueba2"></agm-marker>
     
+  
+    <agm-marker [latitude] = "latPrueba6" [longitude]="lngPrueba6" [label] = "labelPrueba6"></agm-marker> 
+    <agm-marker [latitude] = "latPrueba7" [longitude]="lngPrueba7" [label] = "labelPrueba7"></agm-marker>
+    <agm-marker [latitude] = "latPrueba8" [longitude]="lngPrueba8" [label] = "labelPrueba8"></agm-marker> 
+
+   
 </agm-map>
+<div fxLayout="row">
+<mat-card class = "Show Time">
+    <h3>Tiempo </h3>
+    <mat-card-content *ngFor="let bus of paraderos" >
+    
+    {{bus.nombre}}
+    <br>
+     {{getTime([busLocationlat(),busLocationlng()],[bus.pos[0],bus.pos[1]])}}
+    </mat-card-content>
+</mat-card>
+</div>
+<!--
+<h3>Paradero </h3>
+<mat-form-field appearance="fill">
+    <mat-label>Paraderos</mat-label>
+
+    <mat-select >
+      <mat-option *ngFor="let m of paraderos" (click)="getTime([busLocationlat(),busLocationlng()],[m.pos[0],m.pos[1]])" [value]="m.pos">
+          {{m.nombre}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+ 
+-->
+
+
+</div>
+</div>

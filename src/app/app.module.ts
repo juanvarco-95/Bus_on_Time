@@ -9,36 +9,50 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { GoogleMapsModule} from '@angular/google-maps';
 import { AgmCoreModule } from '@agm/core';
-
-
-
-
+import { AgmDirectionModule } from 'agm-direction';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { MapaComponent } from './mapa/mapa.component';
+import { ListFirebaseComponent } from './list-firebase/list-firebase.component';
+import { environment } from 'src/environments/environment';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    MapaComponent
+    MapaComponent,
+    ListFirebaseComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatListModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+   
     MatToolbarModule,
     FlexLayoutModule,
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
+    AgmDirectionModule,
+    AngularFireModule.initializeApp(environment),
+    AngularFireDatabaseModule,
+
     GoogleMapsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAiCcVaA3sTo0Zv3caDi4HdQYARcjo3yI4',
       libraries: ['geometry']
     }),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

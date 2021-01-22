@@ -8,7 +8,9 @@ const BUSES: Bus[] = [
     name: 'Ruta 27 Megabus',
     image: '/assets/Ruta27.jpg',
     disponibility: true,
-    rute: '/assets/Mapa.jpg'
+    rute: '/assets/Mapa.jpg',
+    time: 30,
+    pos: [[31,11],[31,11]],
   },
 
 ];

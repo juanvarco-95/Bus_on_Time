@@ -1,5 +1,4 @@
 class Location{
-
 	constructor(callback) {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition((pos)=>{

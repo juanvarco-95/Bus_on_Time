@@ -1,5 +1,5 @@
-export class Bus {
-    id: string;
+export interface App {
+    $key: string;
     name: string;
     image: string;
     disponibility: boolean;
@@ -7,4 +7,3 @@ export class Bus {
     time: number;
     pos: number[][];  
 }
-
