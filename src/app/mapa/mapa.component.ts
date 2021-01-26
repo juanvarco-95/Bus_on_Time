@@ -96,6 +96,7 @@ const DRAWMAP: drawMap[] = [
 })
 export class MapaComponent implements OnInit {
 
+ 
 
   buses = BUSES;
   paraderos = PARADEROS;
@@ -105,6 +106,8 @@ export class MapaComponent implements OnInit {
   show = true;
   zoom = 15;
 
+  displayedColumns: string[] =['id'];
+  dataSource = this.paraderos;
   
   //Direcciones
 

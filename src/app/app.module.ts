@@ -14,6 +14,8 @@ import { AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTableExporterModule } from 'mat-table-exporter';
+import { MatTableModule} from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import 'hammerjs';
@@ -34,10 +36,11 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     MatListModule,
+    MatTableModule,
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-   
+   MatTableExporterModule,
     MatToolbarModule,
     FlexLayoutModule,
     MatGridListModule,
