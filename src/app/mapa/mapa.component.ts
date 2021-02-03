@@ -34,7 +34,7 @@ const PARADEROS: paradero[] = [
   {
     id: '2',
     nombre: "Paradero 3",
-    pos: [4.806452,-75.704925],
+    pos: [4.8073804,-75.7250838],
   }
 ];
 
@@ -67,24 +67,26 @@ const DRAWMAP: drawMap[] = [
   },
   {
     id: '6',
-    lat: 4.805671,
-    lng: -75.716591,
+    lat: 4.807588,
+    lng: -75.730707,
   },
   {
     id: '7',
-    lat: 4.807903,
-    lng: -75.710638,
+    lat: 4.808191,
+    lng: -75.729463,
   },
   {
     id: '8',
-    lat: 4.808144,
-    lng: -75.708140,
+    lat: 4.808362,
+    lng: -75.728303,
   },
   {
     id: '9',
-    lat: 4.806452,
-    lng: -75.704925,
+    lat: 4.8073804,
+    lng: -75.7250838,
+
   },
+ 
 
   
 ];
@@ -119,45 +121,19 @@ export class MapaComponent implements OnInit {
   lngBus = -75.6885;
   labelBus = "B";
    
-  latPrueba1 = 4.8044173;
-  lngPrueba1 = -75.7387846;
-  labelPrueba1 = "P1";   
+  ParaderoLat1 = 4.8094985;
+  ParaderoLng1 = -75.7347102;
+  labelParadero1 = "P1";
 
-  latPrueba2 = 4.8094985;
-  lngPrueba2 = -75.7347102;
-  labelPrueba2 = "P1";
+  ParaderoLat2 = 4.8071732;
+  ParaderoLng2 = -75.7318121;
+  labelParadero2 = "P2";
 
-  latPrueba3 = 4.8095707;
-  lngPrueba3 = -75.7336736;
-  labelPrueba3 = "P3";
+  ParaderoLat3 = 4.8073804;
+  ParaderoLng3 = -75.7250838 ;
+  labelParadero3 = "P3";
 
-  
 
-  latPrueba4 =  4.8089787;
-  lngPrueba4 = -75.733062;
-  labelPrueba4 = "P4";
-
-  
-
-  latPrueba5 = 4.8081408;
-  lngPrueba5 = -75.7328917 ;
-  labelPrueba5 = "P5";
-
-   
-
-  latPrueba6 = 4.8071732;
-  lngPrueba6 = -75.7318121;
-  labelPrueba6 = "P2";
-
-  
-
-  latPrueba7 = 4.8073804;
-  lngPrueba7 = -75.7250838 ;
-  labelPrueba7 = "P7";
-
-  latPrueba8 = 4.7934136;
-  lngPrueba8 = -75.6908467;
-  labelPrueba8 = "P8";
   
 public lat: Number = 0
 public lng: Number = 0
