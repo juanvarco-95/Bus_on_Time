@@ -26,16 +26,16 @@ const PARADEROS: paradero[] = [
     nombre: "Paradero 1",
     pos: [4.8094985,-75.7347102],
   },
-  {
-    id: '1',
-    nombre: "Paradero 2",
-    pos: [4.8071732,-75.7318121],
-  },
-  {
-    id: '2',
-    nombre: "Paradero 3",
-    pos: [4.8073804,-75.7250838],
-  }
+//  {
+//    id: '1',
+//    nombre: "Paradero 2",
+//    pos: [4.8071732,-75.7318121],
+//  },
+//  {
+//    id: '2',
+//    nombre: "Paradero 3",
+//    pos: [4.8073804,-75.7250838],
+//  }
 ];
 
 const DRAWMAP: drawMap[] = [
@@ -173,10 +173,6 @@ public lng: Number = 0
 
   }
 
-  
-  
-  
-
 
   ngOnInit(): void {
     //this.getTime([4.8095707,-75.7336736],[4.8089787,-75.733062])
@@ -197,7 +193,7 @@ public lng: Number = 0
     let v7 = this.getTimeMinute(time);  
     console.log(v7[0]); 
     
-    return ("h: " + v7[0]  +  " m: " + v7[1].toFixed(0) + " s: " + v7[2]);
+    return (" T: " + v7[1].toFixed(0) + "m:" + v7[2] + "s");
   }
 /*
   getDistance(pos1,pos2){
